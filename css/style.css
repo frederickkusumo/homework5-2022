@@ -20,8 +20,8 @@ header, .nav_links{
     align-items: center;
 }
 
-a:visited{
-    background-color: blue;
+a:link, a:visited{
+    color: blue;
 }
 
 .card > header{
@@ -36,4 +36,35 @@ a:visited{
 .card{
     border-top-left-radius: 50px;
     border-top-right-radius: 50px;
+    flex-basis: 450px; 
+}
+
+.pricing{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+}
+
+.gallery img{
+    border: solid 10px #50C7C7;
+    margin: 10px 10px 10px 10px;
+    width: 300px;
+}
+
+.gallery{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+@media screen and (min-width:900px){
+    header{
+        flex-direction: row;
+        justify-content: flex-start;
+    }
+
+    .nav_links{
+        flex-direction: row;
+    }
 }
