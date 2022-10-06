@@ -59,12 +59,59 @@ a:link, a:visited{
 }
 
 @media screen and (min-width:900px){
-    header{
+    header, .nav_links{
         flex-direction: row;
-        justify-content: flex-start;
+        justify-content: space-between;
+    }
+
+    .card{
+        flex-basis: 275px;
+    } 
+
+    body > header{
+        position: sticky;
+        top: 0;
+    }
+}
+
+@media screen and (prefers-reduced-motion: reduce){
+    #logo{
+        animation: none;
+    }
+}
+
+@media print{
+    body{
+        font-family: Arial, Helvetica;
+        background-image: none;
+    }
+
+    #gallery, .gallery{
+        display: none;
+    }
+
+    nav{
+        width: 100%;
     }
 
     .nav_links{
+        display: flex;
         flex-direction: row;
+        justify-content: space-around;
+    }
+
+    .card{
+        border: solid 2px #45ADDD;
+        flex-basis: 325px;
+    }
+
+    .pricing{
+        flex-direction: row;
+        flex-wrap: nowrap;
+        align-items: flex-end;
+    }
+/* even, specify the li, show up all times */
+    .card ul li:nth-child(even):after{
+        content: "\1F44D";
     }
 }
