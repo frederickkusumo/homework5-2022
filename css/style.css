@@ -110,7 +110,7 @@ a:link, a:visited{
         flex-wrap: nowrap;
         align-items: flex-end;
     }
-/* even, specify the li, show up all times */
+
     .card ul li:nth-child(even):after{
         content: "\1F44D";
     }
